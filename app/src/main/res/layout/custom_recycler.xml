@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="recycler"
+            type="com.example.yugan.savedata.view.MainViewModel" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/view_bg">
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
+            <LinearLayout style="@style/customRecycler">
+
+                <TextView style="@style/txtNames"
+                    android:text="Name"/>
+
+                <TextView
+                    android:id="@+id/name"
+                    style="@style/txtDetails" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/customRecycler">
+
+                <TextView style="@style/txtNames"
+                    android:text="User Id"/>
+
+                <TextView
+                    android:id="@+id/userId"
+                    style="@style/txtDetails" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/customRecycler"
+                android:layout_marginBottom="15dp">
+
+                <TextView style="@style/txtNames"
+                    android:text="Password"/>
+
+                <TextView
+                    android:id="@+id/password"
+                    style="@style/txtDetails" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+</layout>
