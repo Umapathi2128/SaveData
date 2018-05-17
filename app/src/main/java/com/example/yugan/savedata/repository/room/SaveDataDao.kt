@@ -16,4 +16,7 @@ interface SaveDataDao {
 
     @Delete
     fun deleteData(saveDataModel: SaveDataModel)
+
+    @Query("DELETE FROM SaveDataModel WHERE name=:name AND userId=:userId AND password=:password")
+    abstract fun deleteByUser( name:String,userId:String,password:String)
 }

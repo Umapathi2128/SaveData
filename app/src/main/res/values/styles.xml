@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -6,7 +6,30 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:fontFamily" tools:ignore="NewApi">@font/comic_sans</item>
     </style>
+
+    <style name="AlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+    </style>
+
+    <style name="NegativeButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">#f00</item>
+    </style>
+
+    <style name="PositiveButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">#00f</item>
+    </style>
+
+    <!--<style name="theme" parent="Theme.AppCompat.Light.DarkActionBar">-->
+        <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+        <!--<item name="colorPrimary">@color/colorPrimary</item>-->
+        <!--<item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+        <!--<item name="colorAccent">@color/colorAccent</item>-->
+        <!--<item name="android:fontFamily" tools:ignore="NewApi">@font/comic_sans</item>-->
+        <!--<item name="android:activityOpenEnterAnimation">@android:anim/fade_in</item>-->
+    <!--</style>-->
 
     <!-- custom recycler view-->
     <style name="customRecycler">
@@ -21,7 +44,7 @@
         <item name="android:layout_weight">1.2</item>
         <item name="android:textSize">18sp</item>
         <item name="android:layout_margin">5dp</item>
-        <item name="android:textColor">#000</item>
+        <item name="android:textColor">#f5f3f3</item>
     </style>
     
     <style name="txtDetails">
@@ -30,6 +53,26 @@
         <item name="android:layout_weight">2</item>
         <item name="android:textSize">18sp</item>
         <item name="android:layout_margin">5dp</item>
-        <item name="android:textColor">#000</item>
+        <item name="android:textColor">#f5f3f3</item>
+    </style>
+
+    <!-- add activity-->
+    <style name="txtAdd">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="android:layout_marginLeft">15dp</item>
+    </style>
+
+    <style name="etxtAdd">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:inputType">text</item>
+        <item name="android:textAllCaps">false</item>
     </style>
 </resources>

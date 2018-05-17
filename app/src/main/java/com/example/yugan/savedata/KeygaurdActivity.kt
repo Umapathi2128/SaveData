@@ -1,5 +1,6 @@
 package com.example.yugan.savedata
 
+import android.annotation.TargetApi
 import android.app.Activity
 import android.app.KeyguardManager
 import android.content.Context
@@ -13,6 +14,7 @@ import com.example.yugan.savedata.view.MainActivity
 
 class KeygaurdActivity : AppCompatActivity() {
 
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,11 +36,12 @@ class KeygaurdActivity : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
         if(resultCode== Activity.RESULT_OK && requestCode==100)
         {
-            Toast.makeText(this,"SUCCESS: Verified user authentication...",Toast.LENGTH_LONG).show()
+//            Toast.makeText(this,"SUCCESS: Verified user authentication...",Toast.LENGTH_LONG).show()
             startActivity(Intent(this,MainActivity::class.java))
             finish()
         }else{
             Toast.makeText(this," FAILURE :  unable to verify user authentication...",Toast.LENGTH_LONG).show()
+            finish()
         }
     }
 

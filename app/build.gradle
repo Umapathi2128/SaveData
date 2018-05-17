@@ -5,6 +5,7 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 
 apply plugin: 'kotlin-android-extensions'
+apply from: '../config/quality/quality.gradle'
 
 android {
     compileSdkVersion 27
@@ -39,9 +40,18 @@ dependencies {
     implementation 'com.android.support:design:27.1.1'
     implementation 'com.android.support:recyclerview-v7:27.1.1'
     implementation 'com.android.support:cardview-v7:27.1.1'
+    implementation 'com.android.support:support-v4:27.1.1'
+//    implementation "com.daimajia.swipelayout:library:1.2.0@aar"
     //room database...
-    implementation 'android.arch.persistence.room:runtime:1.1.0-rc1'
-    kapt "android.arch.persistence.room:compiler:1.1.0-rc1"
-    testImplementation 'android.arch.persistence.room:testing:1.1.0-rc1'
-    implementation 'android.arch.persistence.room:rxjava2:1.1.0-rc1'
+    implementation 'android.arch.persistence.room:runtime:1.1.0'
+    kapt "android.arch.persistence.room:compiler:1.1.0"
+    testImplementation 'android.arch.persistence.room:testing:1.1.0'
+    implementation 'android.arch.persistence.room:rxjava2:1.1.0'
+
+    // swipe layout...
+//    implementation 'com.daimajia.easing:library:1.0.0@aar'
+//    implementation 'com.daimajia.androidanimations:library:1.1.2@aar'
+//    implementation 'com.nineoldandroids:library:2.4.0'
+    // This dude gave a shoutout to you (daimajia) on his github page:
+//    implementation 'jp.wasabeef:recyclerview-animators:1.0.3@aar'
 }

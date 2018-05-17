@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
     <data>
         <variable
-            name="recycler"
-            type="com.example.yugan.savedata.view.MainViewModel" />
+            name="viewHolder"
+            type="com.example.yugan.savedata.view.MainDataModel" />
     </data>
 
     <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -13,45 +14,63 @@
         android:layout_marginRight="13dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/view_bg">
-
-        <LinearLayout
-            android:id="@+id/linear"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-
-            android:orientation="vertical">
-
-            <LinearLayout style="@style/customRecycler">
-
-                <TextView style="@style/txtNames"
-                    android:text="Name"/>
-
-                <TextView
-                    android:id="@+id/name"
-                    style="@style/txtDetails" />
-            </LinearLayout>
-
-            <LinearLayout style="@style/customRecycler">
-
-                <TextView style="@style/txtNames"
-                    android:text="User Id"/>
-
-                <TextView
-                    android:id="@+id/userId"
-                    style="@style/txtDetails" />
-            </LinearLayout>
-
             <LinearLayout
-                style="@style/customRecycler"
-                android:layout_marginBottom="15dp">
+                android:id="@+id/linear"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-                <TextView style="@style/txtNames"
-                    android:text="Password"/>
+                <LinearLayout style="@style/customRecycler">
 
-                <TextView
-                    android:id="@+id/password"
-                    style="@style/txtDetails" />
+                    <TextView
+                        style="@style/txtNames"
+                        android:text="@string/name" />
+
+                    <TextView
+                        android:id="@+id/name"
+                        style="@style/txtDetails"
+                        android:text="@{viewHolder.name}" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/customRecycler">
+
+                    <TextView
+                        style="@style/txtNames"
+                        android:text="@string/user_id" />
+
+                    <TextView
+                        android:id="@+id/userId"
+                        style="@style/txtDetails"
+                        android:text="@{viewHolder.userId}" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/customRecycler"
+                    android:layout_marginBottom="15dp">
+
+                    <TextView
+                        style="@style/txtNames"
+                        android:text="@string/password" />
+
+                    <TextView
+                        android:id="@+id/password"
+                        style="@style/txtDetails"
+                        android:text="@{viewHolder.password}" />
+                </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
+            <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@drawable/ic_create"-->
+            <!--app:layout_constraintRight_toRightOf="parent"-->
+            <!--android:layout_marginRight="50dp"/>-->
+
+            <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@drawable/ic_delete"-->
+            <!--app:layout_constraintRight_toRightOf="parent"-->
+            <!--android:layout_marginRight="20dp"/>-->
+
     </android.support.constraint.ConstraintLayout>
 </layout>

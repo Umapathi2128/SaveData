@@ -5,9 +5,10 @@
     <color name="colorAccent">#7b4558</color>
 
     <color name="skyBlue">#d89093de</color>
-    <color name="orange">#c9f20c04</color>
-    <color name="lightYellow">#e0cccc2f</color>
+    <color name="yellow">#5b5b8b</color>
+    <color name="lightYellow">#cccc2f</color>
     <color name="hash">#e19e8e8e</color>
     <color name="unknown">#b869344b</color>
     <color name="red">#e9f20606</color>
+    <color name="revial">#926b4242</color>
 </resources>

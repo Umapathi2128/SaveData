@@ -1,3 +1,16 @@
 <resources>
-    <string name="app_name">SaveData</string>
+    <string name="app_name">MyData</string>
+
+    <string name="name">Name</string>
+    <string name="name_hint">Enter your Name</string>
+    <string name="user_id">UserId</string>
+    <string name="user_id_hint">Enter your UserId</string>
+    <string name="password">Password</string>
+    <string name="password_hint">Enter your Password</string>
+    <string name="addd">Add</string>
+
+    <string name="deleteItem">Delete Item?</string>
+    <string name="yesDelete">Yes,Delete</string>
+    <string name="settings">Settings</string>
+    <string name="nothingToShow">Nothing to show</string>
 </resources>
